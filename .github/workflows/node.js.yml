@@ -51,6 +51,9 @@ jobs:
           gcloud config set project ${{ secrets.PROJECT_ID }}
           gcloud config set app/promote_by_default false
 
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v1'
+
       - name: Deploy to GCP
         run: |
           gcloud app deploy --image-url=miralagustiansyam/tutorial-cicd-github-actions:latest --quiet
