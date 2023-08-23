@@ -57,4 +57,4 @@ jobs:
         run: |
           gcloud auth configure-docker
           docker pull miralagustiansyam/tutorial-cicd-github-actions:latest
-          gcloud run deploy web-app --image=--image-url=miralagustiansyam/tutorial-cicd-github-actions:latest --platform=managed --region=asia-southeast2
+          gcloud run deploy web-app --image-url=miralagustiansyam/tutorial-cicd-github-actions:latest --platform=managed --region=asia-southeast2
